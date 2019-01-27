@@ -12,6 +12,9 @@ public class Heap < T extends Comparable<T> > {
 			size = 0;
 	}
 	private int getParent(int i ) {
+		if(i%2==0) {
+			return (i-1)/2;
+		}
 		return i/2;
 	}
 	private void swap (int i,int j) {
